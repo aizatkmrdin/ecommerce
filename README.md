@@ -1,108 +1,56 @@
-# Ecommerce Flutter Assignment
+# Ecommerce Flutter App Documentation
 
-## Description
+**Table of Contents**
 
-In this assignment, we will require you to create a basic ecommerce application using Flutter running on both iOS and Android. Your task is to create a multi-page mobile application to allow users to browse and search for products.
+[TOCM]
 
-## Instructions
+[TOC]
 
-1. Design and implement a mobile application that allow users to browse and search for products.
-2. The application should have the following screens:
-   1. Home Screen: Display a list of products with their images, names, ratings and prices (discounted prices if available). Add a search bar for users to search products. After searched, display a list of search results.
-   2. Product Detail Screen: Display detailed information about the product such as images, category, brand, rating, status of the inventory, name, price and description.
-3. You are free to design whatever screens you desired as long as user is able to browse and search for products. Instruction #2 is for your reference.
-   API you can used to fetch data are: https://dummyjson.com
-   You can use the following endpoints in your app.
-4. GET https://dummyjson.com/products (Get products)
+#Description
+Welcome to the documentation for the Ecommerce Flutter App project that runs on both iOS and Android platforms. The primary goal of the application is to allow users to browse and search for products.
 
-- Sample Response
-  {
-  "products": [
-  {
-  "id": 1,
-  "title": "iPhone 9",
-  "description": "An apple mobile which is nothing like apple",
-  "price": 549,
-  "discountPercentage": 12.96,
-  "rating": 4.69,
-  "stock": 94,
-  "brand": "Apple",
-  "category": "smartphones",
-  "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-  "images": [
-  "https://i.dummyjson.com/data/products/1/1.jpg","https://i.dummyjson.com/data/products/1/2.jpg","https://i.dummyjson.com/data/products/1/3.jpg","https://i.dummyjson.com/data/products/1/4.jpg","https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-  ]
-  }
-  ],
-  "total": 100,
-  "skip": 0,
-  "limit":30
-  }
+#Instruction
+This app is mobile application with the following functionality:
 
-2. GET https://dummyjson.com/products/1 (Get product)
+Home Screen: Display a list of products with images, names, ratings, and prices (including discounted prices if available). Implement a search bar for users to search for products. After a search, show a list of search results.
 
-- Sample Response
-  {
-  "id": 1,
-  "title": "iPhone 9",
-  "description": "An apple mobile which is nothing like apple",
-  "price": 549,
-  "discountPercentage": 12.96,
-  "rating": 4.69,
-  "stock": 94,
-  "brand": "Apple",
-  "category": "smartphones",
-  "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-  "images": [
-  "https://i.dummyjson.com/data/products/1/1.jpg",
-  "https://i.dummyjson.com/data/products/1/2.jpg",
-  "https://i.dummyjson.com/data/products/1/3.jpg",
-  "https://i.dummyjson.com/data/products/1/4.jpg",
-  "https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-  ]
-  }
+Product Detail Screen: Provide detailed information about a selected product, including images, category, brand, rating, inventory status, name, price, and description.
 
-1. GET https://dummyjson.com/products/search?q=Laptop (Search products)
+Cart Screen: Provide list of selected product, including images, category, name and price.
 
-- Sample Response
-  {
-  "products": [
-  {
-  "id": 1,
-  "title": "iPhone 9",
-  "description": "An apple mobile which is nothing like apple",
-  "price": 549,
-  "discountPercentage": 12.96,
-  "rating": 4.69,
-  "stock": 94,
-  "brand": "Apple",
-  "category": "smartphones",
-  "thumbnail": "https://i.dummyjson.com/data/products/1/thumbnail.jpg",
-  "images": [
-  "https://i.dummyjson.com/data/products/1/1.jpg","https://i.dummyjson.com/data/products/1/2.jpg","https://i.dummyjson.com/data/products/1/3.jpg","https://i.dummyjson.com/data/products/1/4.jpg","https://i.dummyjson.com/data/products/1/thumbnail.jpg"
-  ]
-  }
-  ],
-  "total": 100,
-  "skip": 0,
-  "limit":30
-  }
+The API to fetch data for the application is: https://dummyjson.com
+#Screens
+The application comprises the following screens:
 
-## Requirements
+Home Screen: Display the list of products with search functionality.
+Product Detail Screen: Display detailed information about a selected product.
+Cart Screen: Display the list of products in the cart.
+#API Integration
+All the data integrated from the API into app by using:
 
-- Use Flutter to develop the mobile application.
-- Use a state management like Flutter Bloc, Provider, Getx or Riverpod to manage the app's state.
-- Write clean, maintainable and well-documented code.
+GET https://dummyjson.com/products: Use this endpoint to retrieve a list of products.
 
-### Bonus Points
+GET https://dummyjson.com/products/search?q=: Use this endpoint to search based on keyword.
 
-- Develop a responsive layout to support different screen sizes.
-- Include animation to make UI feel more intuitive.
-- Handle loading, error states and lost internet connection during data fetching.
-- Work in offline mode.
-- Implement pagination to fetch limited records at once.
-- Handle receiving push notification after product is added to cart (Dont need to involve backend).
+GET https://dummyjson.com/products?limit=10: Use this endpoint to retrieve a list of products limit by 10 for pagination.
 
-referens
+#Getting Started
 
-- https://cdn.dribbble.com/userupload/5034252/file/original-e8a2161c1f6f796d13b52762c89de56e.png?resize=2048x1536
+To set up and run the project on your local machine, follow these steps:
+
+Clone the repository:
+
+`git clone https://github.com/your-username/ecommerce-flutter-app.git`
+`$cd ecommerce-flutter-app`
+
+Install Flutter and Dart if not already installed. You can find installation instructions here.
+
+Install required packages:
+`$ flutter pub get`
+
+Run the application:
+`$ flutter run`
+#License
+This project is licensed under the MIT License. More details can be found in the LICENSE file at the root of the project.
+
+If you have any questions or need assistance, feel free to contact us aizatkmrdin@gmail.com.
